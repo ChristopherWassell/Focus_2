@@ -39,3 +39,5 @@ The difference between the two commands is that ‘git branch’ creates a new b
 The shortcut to creating a branch using the UI is: shift+cmd+p and type ‘branch’ into the search. This will open a branch related list at the top of the screen.
 Git the branch a name. And click enter. You will have created a new branch, and will be moved to it 
 By clicking on the branch it will show you what branches there are
+
+"Test"
