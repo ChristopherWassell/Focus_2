@@ -1,7 +1,7 @@
 import { test } from "@playwright/test"
 
 //Visit Home Page (Act)
-test ("Sucessful Login", async ({ page }) => {
+test.only ("Sucessful Login", async ({ page }) => {
     await page.goto ("https://www.saucedemo.com/")
 })
 
