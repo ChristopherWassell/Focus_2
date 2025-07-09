@@ -3,17 +3,31 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test"
+    "test": "cucumber-js test"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Step on use the following instructions to set up the project",
   "devDependencies": {
+    "@cucumber/cucumber": "^11.3.0",
     "@playwright/test": "^1.53.2",
-    "@types/node": "^24.0.10"
+    "@types/node": "^24.0.10",
+    "ts-node": "^10.9.2"
   },
   "dependencies": {
+    "express": "^5.1.0",
     "playwright": "^1.53.2"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristopherWassell/Focus_2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ChristopherWassell/Focus_2/issues"
+  },
+  "homepage": "https://github.com/ChristopherWassell/Focus_2#readme"
 }
