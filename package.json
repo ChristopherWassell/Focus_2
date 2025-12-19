@@ -2,13 +2,34 @@
   "name": "focus_2",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:bdd": "cucumber-js --require features/steps/**/*.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "As I was practicing the set up using a different language (Typescript) My first commit contains the entire set up of the project, including a feature branch.",
   "devDependencies": {
     "@playwright/test": "^1.55.0",
     "@types/node": "^24.5.2"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^11.3.0",
+    "fsevents": "^2.3.2",
+    "playwright": "^1.55.0",
+    "playwright-core": "^1.55.0",
+    "undici-types": "^7.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristopherWassell/Focus_2.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ChristopherWassell/Focus_2/issues"
+  },
+  "homepage": "https://github.com/ChristopherWassell/Focus_2#readme"
 }
