@@ -2,7 +2,9 @@
   "name": "focus_2",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:bdd": "cucumber-js --require features/steps/**/*.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -15,6 +17,7 @@
     "test": "tests"
   },
   "dependencies": {
+    "@cucumber/cucumber": "^11.3.0",
     "fsevents": "^2.3.2",
     "playwright": "^1.55.0",
     "playwright-core": "^1.55.0",
