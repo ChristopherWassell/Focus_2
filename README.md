@@ -22,3 +22,4 @@ git checkout main
 then followed by
 git pull
 
+To run the tests: npx playwright test --headed
