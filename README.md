@@ -23,3 +23,5 @@ then followed by
 git pull
 
 To run the tests: npx playwright test --headed
+
+Task: store credentials in .env file
