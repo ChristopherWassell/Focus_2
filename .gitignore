@@ -1,6 +1,26 @@
 
-# Playwright
+# Ignore node dependencies
 node_modules/
+
+# Ignore build output
+dist/
+out/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+
+# Playwright artifacts
+test-results/
+playwright-report/
+blob-report/
+trace.zip
+
+# macOS system files
+.DS_Store
 /test-results/
 /playwright-report/
 /blob-report/

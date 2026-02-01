@@ -11,7 +11,10 @@
   "description": "As I was practicing the set up using a different language (Typescript) My first commit contains the entire set up of the project, including a feature branch.",
   "devDependencies": {
     "@playwright/test": "^1.55.0",
-    "@types/node": "^24.5.2"
+    "@types/dotenv": "^6.1.1",
+    "@types/node": "^24.5.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   },
   "directories": {
     "test": "tests"
