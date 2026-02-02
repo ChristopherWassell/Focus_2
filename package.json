@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test:bdd": "cucumber-js --require features/steps/**/*.ts"
+    "test:bdd": "npx cucumber-js --config=cucumber.config.js"
   },
   "keywords": [],
   "author": "",
