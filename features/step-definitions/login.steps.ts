@@ -7,6 +7,7 @@ import { InventoryPage } from '../../pages/Inventory.page'; // use relative path
 let loginPage: LoginPage;
 let inventoryPage: InventoryPage;
 
+
 /**
  * Step: Navigate to login page
  * - Initializes LoginPage POM
