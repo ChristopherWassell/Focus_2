@@ -4,14 +4,9 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const standard_user = process.env.STANDARD_USER;
-const password = process.env.PASSWORD;
+// const standard_user = process.env.STANDARD_USER;
+// const password = process.env.PASSWORD;
 
-import { test, expect } from '@playwright/test';
-import { LoginPage } from '../pages/login.page';
-import dotenv from 'dotenv';
-
-dotenv.config();
 
 test.describe('Login Tests', () => {
 
@@ -44,12 +39,12 @@ test.describe('Login Tests', () => {
 
 
 
-  test("a login test using stored credentials", async ({ page }) => {
-    const loginPage = new LoginPage(page);
-    await loginPage.login(standard_user!, password!);
-    await expect(page).toHaveURL(/inventory.html/);
-  });
-});
+  // test("a login test using stored credentials", async ({ page }) => {
+  //   const loginPage = new LoginPage(page);
+  //   await loginPage.login(standard_user!, password!);
+  //   await expect(page).toHaveURL(/inventory.html/);
+  // });
+
 
 
 

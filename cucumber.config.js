@@ -1,6 +1,7 @@
 module.exports = {
   default: {
-    require: ['tests/step-definitions/**/*.ts'],
+    require: ['features/step-definitions/**/*.ts', 'features/hooks.ts'],
+  
     requireModule: ['ts-node/register'],
     format: [
       'progress-bar',
@@ -10,7 +11,7 @@ module.exports = {
     formatOptions: {
       snippetInterface: 'async-await'
     },
-    paths: ['tests/features/*.feature'],
+    paths: ['features/*.feature'],
     publishQuiet: true,
   },
 };
