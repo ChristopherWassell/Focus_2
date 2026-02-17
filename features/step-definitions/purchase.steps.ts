@@ -5,6 +5,7 @@ import { CartPage } from '../../pages/Cart.page';
 import { CheckoutStepOnePage } from '../../pages/CheckoutStepOne.page';
 import { CheckoutStepTwoPage } from '../../pages/CheckoutStepTwoPage.page';
 import { CheckoutCompletePage } from '../../pages/CheckoutComplete.page';
+import { LoginPage } from '../../pages/login.page';
 
 
 
@@ -14,6 +15,15 @@ let cartPage: CartPage;
 let checkoutStepOnePage: CheckoutStepOnePage;
 let checkoutStepTwoPage: CheckoutStepTwoPage;
 let checkoutCompletePage: CheckoutCompletePage;
+let loginPage: LoginPage;
+
+
+Given('I am a registered user and have logged in successfully', async function () {
+loginPage = new LoginPage(this.page);
+  await loginPage.goto();
+  await loginPage.login('standard_user', 'secret_sauce');
+  await expect(this.page).toHaveURL(/inventory.html/);
+});
 
 /**
  * Step: Ensure the user is on the product catalog page
@@ -35,8 +45,7 @@ Given('I am on the product catalog page', async function () {
  * @param itemName - name of the product to add (e.g., "Sauce Labs Backpack")
  */
 When('I add {string} to the cart', async function (itemName: string) {
-  // Call the POM method to click the "Add to cart" button for the product
-  await inventoryPage.addToCart(itemName);
+      await inventoryPage.addToCart(itemName);
 });
 
 /**
@@ -87,6 +96,12 @@ When('I proceed to checkout', async function () {
   await cartPage.clickCheckout();
 });
 
+Then('I continue to checkout information page', async function () {
+  // Verify the URL for the checkout information page
+  await expect(this.page).toHaveURL(/checkout-step-one.html/);
+});
+
+
 /**
  * Step: Fill in shipping information on Checkout Step One page
  * @param firstName - First Name
@@ -98,6 +113,7 @@ When(
   async function (firstName: string, lastName: string, postalCode: string) {
     // Initialize CheckoutStepOnePage POM
     checkoutStepOnePage = new CheckoutStepOnePage(this.page);
+    
 
     // Use POM method to fill in the shipping form
     await checkoutStepOnePage.enterInformation(firstName, lastName, postalCode);
