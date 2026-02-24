@@ -22,6 +22,5 @@ git checkout main
 then followed by
 git pull
 
-To run the tests: npx playwright test --headed
+To run the tests: npx cucumber-js --config cucumber.config.js
 
-Task: store credentials in .env file
